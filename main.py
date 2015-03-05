@@ -25,6 +25,8 @@ def getPassword():
 
     min_num=4
     max_num=len(matrix)
+    #
+    isFind = False
 
     for num in range(min_num,max_num+1):#从04 -> 08
         iter1 = itertools.permutations(matrix,num)#从9个数字中挑出n个进行排列
@@ -35,6 +37,12 @@ def getPassword():
             strlist_sha1 = hashlib.sha1(strlist.decode('hex')).hexdigest()#将字符串进行SHA1加密
             if pswd_hex==strlist_sha1:#将手机文件里的字符串与加密字符串进行对比
                 print u'解锁密码为：',strlist
+                isFind = True
+                break
+            #print u'内层--》1'
+        #print u'外层--》--》--》2'
+        if isFind == True:
+            break
 
 if __name__ == '__main__':
     print u'解密开始：'
@@ -42,4 +50,4 @@ if __name__ == '__main__':
     getPassword()
     endTimes = time.time()
     times = endTimes - startTimes
-    print u'共耗时：' , repr(times) , u'秒'
+    print u'共耗时：' , repr('%.2f' %times) , u'秒'
