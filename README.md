@@ -5,7 +5,7 @@ android手机屏幕的手势密码：
 
 ####解密开始：
 #####加密后的密码为：63f6171ce48733d6fca74f0c76c78a9ef2e3c430
-#####解锁密码为： 000102040603050807
+#####解锁密码为： 00-01-02-04-06-03-05-08-07
 #####共耗时： 4.7755961418151855 秒
 
 ![image](https://github.com/Tim9Liu9/python_android_gesture_password/blob/master/gesture_jpg.png)
